@@ -1,231 +1,290 @@
-# ADHIRA - Adaptive Digital Health & Intelligence Response Assistant
+# ADHIRA
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-009688.svg?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
-[![React](https://img.shields.io/badge/React-61DAFB.svg?logo=react&logoColor=black)](https://reactjs.org/)
-[![Supabase](https://img.shields.io/badge/Supabase-181818.svg?logo=supabase&logoColor=white)](https://supabase.com/)
+## Adaptive Digital Health & Intelligence Response Assistant
 
-ADHIRA is an intelligent health assistant powered by Google's Gemini AI, designed to provide personalized health-related assistance and information. It combines advanced natural language processing with a user-friendly interface to deliver accurate and helpful health guidance.
+ADHIRA is an AI-powered health companion designed to make healthcare guidance, health monitoring, emergency assistance, and voice interaction accessible from a single mobile experience.
 
-## 🚀 Tech Stack
+Built with Flutter, FastAPI, Gemini AI, and Supabase, ADHIRA combines conversational intelligence with practical health tools such as health metric tracking, medical report analysis, SOS alerts, medication conflict detection, and voice-first interactions.
 
-### Frontend
-- **React** - A JavaScript library for building user interfaces
-- **Vite** - Next Generation Frontend Tooling
-- **Tailwind CSS** - A utility-first CSS framework
-- **Web Speech API** - For browser-based speech recognition and synthesis
-- **React Query** - Data fetching and state management
+---
+
+## Vision
+
+Healthcare apps are often fragmented.
+
+One app tracks health metrics.
+
+Another stores reports.
+
+Another handles reminders.
+
+Another provides emergency support.
+
+ADHIRA aims to bring these capabilities together into a single intelligent assistant that users can talk to naturally.
+
+---
+
+## Core Features
+
+### AI Health Assistant
+
+* Gemini-powered conversational health assistant
+* Context-aware conversations
+* Follow-up question support
+* Personalized health guidance
+
+### Voice Interaction
+
+* Speech-to-Text (STT)
+* Text-to-Text (TTT)
+* Text-to-Speech (TTS)
+* Dedicated Voice Mode
+
+### Health Metrics Dashboard
+
+Track:
+
+* Blood Pressure
+* Blood Sugar
+* Heart Rate
+* Sleep Hours
+* Steps
+* Body Temperature
+* Oxygen Saturation (SpO₂)
+* Respiratory Rate
+* Weight
+* BMI
+
+Metrics are stored securely using Supabase.
+
+---
+
+### Medical Report Analysis
+
+Upload:
+
+* Blood reports
+* Lab reports
+* Prescriptions
+* Medical PDFs
+* Medical images
+
+ADHIRA can:
+
+* Extract report information
+* Explain findings
+* Summarize results
+* Answer follow-up questions
+
+---
+
+### Medicine Conflict Detection
+
+Analyze:
+
+* Medicines
+* Food interactions
+* Potential conflicts
+
+Designed to help users identify possible medication-related risks.
+
+---
+
+### Emergency SOS System
+
+Built specifically for fast emergency communication.
+
+Features:
+
+* One-tap SOS
+* Emergency contact management
+* Automatic SMS alerts
+* Live location sharing
+* Delivery tracking
+* Android-native SMS delivery
+
+No external SMS gateway required.
+
+---
+
+### Smart Reminders
+
+Manage:
+
+* Medication reminders
+* Health reminders
+* Daily routines
+
+---
+
+## Tech Stack
+
+### Mobile App
+
+* Flutter
+* Dart
 
 ### Backend
-- **FastAPI** - Modern, fast (high-performance) web framework for building APIs
-- **Python 3.8+** - Core programming language
-- **Google Gemini AI** - Advanced AI/ML capabilities
-- **Groq** - High-performance inference engine for AI models
-- **Twilio** - For SMS and voice communication
 
-### Database & Storage
-- **Supabase** - Open source Firebase alternative for database and authentication
-- **PostgreSQL** - Powerful, open source object-relational database system
+* FastAPI
+* Python
 
-### DevOps & Tools
-- **Docker** - Containerization
-- **Git** - Version control
-- **GitHub Actions** - CI/CD pipeline
-- **Poetry** - Python dependency management
+### AI
 
-## 🌟 Features
+* Google Gemini 2.5 Flash
 
-- **AI-Powered Health Assistance**: Leverages Google's Gemini AI and Groq for intelligent, context-aware responses
-- **Voice Interaction**: Built-in Web Speech API integration for voice commands and responses
-- **Multi-channel Communication**: Twilio integration for SMS and voice call capabilities
-- **Real-time Updates**: WebSocket support for live data streaming
-- **Secure Authentication**: JWT-based authentication with Supabase
-- **Responsive Design**: Mobile-first approach with Tailwind CSS
-- **RESTful API**: Well-documented FastAPI backend
+### Database & Authentication
 
-## 🚀 Quick Start
+* Supabase
+* PostgreSQL
 
-### Prerequisites
+### Location & Device Features
 
-- Python 3.8+
-- Node.js 16+ (for frontend)
-- Docker (optional)
-- Google API Key with Gemini AI access
-- Supabase project
-- Twilio account (for SMS/voice features)
-- Groq API key
+* Geolocator
+* Native Android SMS APIs
+* Speech Recognition
+* Text-to-Speech
 
-### Installation
+---
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/health-assistant-adhira.git
-   cd health-assistant-adhira
-   ```
+## Repository Structure
 
-2. **Set up Python environment**
-   ```bash
-   # Using Poetry (recommended)
-   pip install poetry
-   poetry install
-
-   # Or with virtualenv
-   python -m venv .venv
-   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-   pip install -r requirements.txt
-   ```
-
-3. **Set up frontend dependencies**
-   ```bash
-   cd frontend
-   npm install
-   cd ..
-   ```
-
-4. **Configure environment variables**
-   - Copy `.env.example` to `.env` in both root and backend directories
-   - Update with your API keys and configuration:
-     ```
-     # Backend .env
-     GOOGLE_API_KEY=your_google_api_key
-     GROQ_API_KEY=your_groq_api_key
-     SUPABASE_URL=your_supabase_url
-     SUPABASE_KEY=your_supabase_key
-     TWILIO_ACCOUNT_SID=your_twilio_sid
-     TWILIO_AUTH_TOKEN=your_twilio_token
-     TWILIO_PHONE_NUMBER=your_twilio_number
-     ```
-
-### Running with Docker (Recommended)
-
-```bash
-docker-compose up --build
+```text
+adhira/
+├── mobile_flutter/
+│   ├── lib/
+│   ├── android/
+│   ├── ios/
+│   └── pubspec.yaml
+│
+├── backend/
+│   ├── main.py
+│   ├── db.py
+│   ├── requirements.txt
+│   └── services/
+│
+├── supabase/
+│   ├── migrations/
+│   └── schema/
+│
+├── docs/
+│
+├── .env.example
+├── .gitignore
+└── README.md
 ```
 
-### Running Manually
+---
 
-1. **Start the backend server**
-   ```bash
-   cd backend
-   uvicorn main:app --reload
-   ```
+## Environment Variables
 
-2. **In a new terminal, start the frontend**
-   ```bash
-   cd frontend
-   npm run dev
-   ```
+Create a `.env` file using `.env.example`.
 
-3. Open your browser and navigate to `http://localhost:5173`
-
-## 🛠️ Project Structure
-
-```
-health-assistant-adhira/
-├── backend/              # FastAPI backend
-│   ├── app/             # Application code
-│   │   ├── api/         # API routes
-│   │   ├── core/        # Core functionality
-│   │   ├── models/      # Database models
-│   │   ├── services/    # Business logic
-│   │   └── utils/       # Utility functions
-│   ├── tests/           # Test files
-│   ├── main.py          # Application entry point
-│   └── requirements.txt # Python dependencies
-├── frontend/            # React frontend
-│   ├── public/          # Static files
-│   ├── src/             # Source code
-│   │   ├── components/  # React components
-│   │   ├── hooks/       # Custom React hooks
-│   │   ├── services/    # API services
-│   │   └── styles/      # Global styles
-│   └── package.json     # Frontend dependencies
-├── docker/              # Docker configuration
-├── .github/             # GitHub Actions workflows
-└── docs/                # Documentation
-```
-
-## 🔍 API Documentation
-
-Once the backend is running, visit:
-- API Docs: `http://localhost:8000/docs`
-- Redoc: `http://localhost:8000/redoc`
-
-## 🤖 Using the AI Assistant
-
-1. **Web Interface**:
-   - Open the web app in your browser
-   - Use the chat interface to type or speak your queries
-   - The assistant will respond using Gemini AI and Groq
-
-2. **Voice Commands**:
-   - Click the microphone icon to activate voice input
-   - Speak your health-related queries
-   - The assistant will respond with voice output
-
-3. **SMS Integration**:
-   - Send an SMS to your Twilio number
-   - The assistant will process your query and respond via SMS
-
-## 📝 Environment Variables
-
-Create a `.env` file in the backend directory with the following variables:
+Example:
 
 ```env
-# Google Gemini
-GOOGLE_API_KEY=your_google_api_key
+GOOGLE_API_KEY=
 
-# Groq
-GROQ_API_KEY=your_groq_api_key
+SUPABASE_URL=
+SUPABASE_KEY=
 
-# Supabase
-SUPABASE_URL=your_supabase_url
-SUPABASE_KEY=your_supabase_key
-
-# Twilio
-TWILIO_ACCOUNT_SID=your_twilio_sid
-TWILIO_AUTH_TOKEN=your_twilio_token
-TWILIO_PHONE_NUMBER=your_twilio_number
-
-# App Settings
+PORT=8000
 ENVIRONMENT=development
-DEBUG=True
-ALLOWED_ORIGINS=http://localhost:5173,http://localhost:8000
 ```
 
-## 🧪 Testing
+Never commit:
 
-Run the test suite:
+* Real API Keys
+* Supabase Service Keys
+* Secrets
+* Tokens
+
+---
+
+## Local Development
+
+### Backend
 
 ```bash
-# Backend tests
 cd backend
-pytest
 
-# Frontend tests
-cd frontend
-npm test
+python -m venv .venv
+
+pip install -r requirements.txt
+
+uvicorn main:app --reload
 ```
 
-## 📄 License
+Backend:
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```text
+http://localhost:8000
+```
 
-## 🙏 Acknowledgments
+API Docs:
 
-- Google for the Gemini AI
-- Groq for the high-performance inference
-- Supabase for the backend services
-- Twilio for communication APIs
-- The open-source community for various libraries and tools
+```text
+http://localhost:8000/docs
+```
 
-## 🤝 Contributing
+---
 
-Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+### Flutter App
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+```bash
+cd mobile_flutter
+
+flutter pub get
+
+flutter run
+```
+
+---
+
+## Current Development Status
+
+### Completed
+
+* AI Chat Assistant
+* Health Metrics
+* Dashboard
+* Authentication
+* Speech-to-Text
+* Text-to-Speech
+* Voice Mode
+* Medical Report Analysis
+* SOS SMS Alerts
+* Reminder System
+
+### In Progress
+
+* Speech-to-Speech (STS)
+* Advanced Health Insights
+* Improved Design System
+* Report History
+* Analytics
+
+---
+
+## Security
+
+ADHIRA is intended as a health-assistance platform and should not replace professional medical advice, diagnosis, or treatment.
+
+Users should consult qualified healthcare professionals for medical decisions.
+
+---
+
+## License
+
+MIT License
+
+---
+
+## Built With
+
+* Flutter
+* FastAPI
+* Gemini AI
+* Supabase
+
+Designed and developed as part of the ADHIRA mission to create a practical AI-powered healthcare companion.
