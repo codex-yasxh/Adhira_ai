@@ -1,0 +1,2 @@
+COLUMNS OK — avatar_url exists
+rows: []

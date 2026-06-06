@@ -1,0 +1,6 @@
+Client initialized: True
+[OK]     users — 0 rows — data: []
+[OK]     health_metrics — 0 rows — data: []
+[OK]     medicines — 0 rows — data: []
+[OK]     reminders — 0 rows — data: []
+[OK]     chat_messages — 0 rows — data: []

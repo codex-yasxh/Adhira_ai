@@ -1,0 +1,43 @@
+# OS/editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.tmp
+*.iml
+*.ipr
+*.iws
+.idea/
+.vscode/
+
+# Generic logs/crashes
+*.log
+hs_err_pid*
+replay_pid*
+
+# Dart/Flutter
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub/
+.pub-cache/
+coverage/
+build/
+**/doc/api/
+app.*.symbols
+app.*.map.json
+
+# Android/Gradle local and build artifacts
+android/.gradle/
+android/local.properties
+android/captures/
+android/build/
+android/app/debug/
+android/app/profile/
+android/app/release/
+
+# Signing and secrets
+*.jks
+*.keystore
+key.properties

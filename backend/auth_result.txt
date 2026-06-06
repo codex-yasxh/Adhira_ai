@@ -1,0 +1,5 @@
+SIGNUP OK — user id: cce75b3c-e060-43a3-9453-b0b1746d80f5
+  session: True
+  user email confirmed: 2026-05-30 05:04:50.663027+00:00
+SIGNIN OK — user id: cce75b3c-e060-43a3-9453-b0b1746d80f5
+USERS INSERT OK — [{'id': 'cce75b3c-e060-43a3-9453-b0b1746d80f5', 'name': 'Test User', 'email': 'testuser99@adhira.com', 'created_at': '2026-05-30T05:04:51.791198+00:00'}]

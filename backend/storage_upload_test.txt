@@ -1,0 +1,3 @@
+UPLOAD ERROR: StorageException: {'statusCode': 400, 'error': 'Unauthorized', 'message': 'new row violates row-level security policy'}
+PUBLIC URL: https://qyiuyweywoqtrltrawgk.supabase.co/storage/v1/object/public/avatar/test/test.txt?
+LIST OK: 0 items

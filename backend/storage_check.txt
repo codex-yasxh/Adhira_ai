@@ -1,0 +1,3 @@
+Total buckets: 0
+  No buckets found — avatars bucket not created yet
+avatars bucket accessible — 0 files
