@@ -255,15 +255,11 @@ flutter run
 * Medical Report Analysis
 * SOS SMS Alerts
 * Reminder System
-
-### In Progress
-
-* Speech-to-Speech (STS)
+* * Speech-to-Speech (STS)
 * Advanced Health Insights
 * Improved Design System
 * Report History
 * Analytics
-
 ---
 
 ## Security
